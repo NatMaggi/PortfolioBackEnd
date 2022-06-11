@@ -28,7 +28,7 @@ public class Educacion implements Serializable {
        
    }
 
-    public Educacion(Long id, String institucion, String fechaFin, String titulo, Persona persona) {
+    public Educacion(Long id, String institucion, String fechaFin, String titulo) {
         this.id = id;
         this.institucion = institucion;
         this.fechaFin = fechaFin;

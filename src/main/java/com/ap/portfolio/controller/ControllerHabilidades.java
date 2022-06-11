@@ -5,6 +5,7 @@ package com.ap.portfolio.controller;
 import com.ap.portfolio.model.Habilidades;
 import com.ap.portfolio.service.HabilidadesService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -23,11 +24,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/habilidades")
 public class ControllerHabilidades {
-     private final HabilidadesService habilidadesService;
-
-    public ControllerHabilidades(HabilidadesService habilidadesService) {
-        this.habilidadesService = habilidadesService;
-    }
+    @Autowired
+    HabilidadesService habilidadesService;
+    
    @GetMapping("/all")
    public ResponseEntity<List<Habilidades>> getAllHabilidades () {
        List<Habilidades> habilidades = habilidadesService.findAllHabilidades();

@@ -9,6 +9,7 @@ import com.ap.portfolio.model.Proyectos;
 
 import com.ap.portfolio.service.ProyectosService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,11 +26,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/proyectos")
 public class ControllerProyectos {
-  private final ProyectosService proyectosService;
-
-    public ControllerProyectos(ProyectosService proyectosService) {
-        this.proyectosService = proyectosService;
-    }
+        @Autowired
+        ProyectosService  proyectosService;
+    
    @GetMapping("/all")
    public ResponseEntity<List<Proyectos>> getAllProyectos () {
        List<Proyectos> proyectos = proyectosService.findAllProyectos();

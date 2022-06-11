@@ -30,7 +30,7 @@ public class Habilidades implements Serializable {
         
     }
 
-    public Habilidades(int id, String habilidad, String url_img, Persona persona) {
+    public Habilidades(int id, String habilidad, String url_img) {
         this.id = id;
         this.habilidad = habilidad;
         this.url_img = url_img;

@@ -3,6 +3,7 @@ package com.ap.portfolio.controller;
 import com.ap.portfolio.model.Educacion;
 import com.ap.portfolio.service.EducacionService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,11 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/educacion")
 public class ControllerEducacion {
-    private final EducacionService educacionService;
-
-    public ControllerEducacion(EducacionService educacionService) {
-        this.educacionService = educacionService;
-    }
+   @Autowired
+   EducacionService educacionService;
+    
    @GetMapping("/all")
    public ResponseEntity<List<Educacion>> getAllEducacion () {
        List<Educacion> educacion = educacionService.findAllEducacion();
@@ -49,7 +48,7 @@ public class ControllerEducacion {
        return new ResponseEntity<>(updateeducacion, HttpStatus.OK);  
    }
     
-    @DeleteMapping("/delete{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteEducacion(@PathVariable("id") Long id) {
        educacionService.deleteEducacion(id);
        return new ResponseEntity<>(HttpStatus.OK);  

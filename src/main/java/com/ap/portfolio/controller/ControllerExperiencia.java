@@ -7,6 +7,7 @@ package com.ap.portfolio.controller;
 import com.ap.portfolio.model.Experiencia;
 import com.ap.portfolio.service.ExperienciaService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -23,11 +24,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/experiencia")
 public class ControllerExperiencia {
-     private final ExperienciaService experienciaService;
-
-    public ControllerExperiencia(ExperienciaService experienciaService) {
-        this.experienciaService = experienciaService;
-    }
+    @Autowired
+    ExperienciaService experienciaService;
+    
    @GetMapping("/all")
    public ResponseEntity<List<Experiencia>> getAllExperiencia () {
        List<Experiencia> experiencia = experienciaService.findAllExperiencia();
