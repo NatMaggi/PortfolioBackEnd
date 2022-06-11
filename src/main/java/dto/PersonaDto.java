@@ -15,7 +15,7 @@ public class PersonaDto {
     public PersonaDto() {
     }
 
-    public PersonaDto(String nombre, String apellido, String edad, String telefono, String correo, String sobre_mi, String url_foto, String posicion, String banner) {
+    public PersonaDto(String nombre, String apellido, String edad, String telefono, String correo, String sobre_mi, String url_foto, String posicion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -24,7 +24,7 @@ public class PersonaDto {
         this.sobre_mi = sobre_mi;
         this.url_foto = url_foto;
         this.posicion = posicion;
-        this.banner = banner;
+
     }
 
     public String getNombre() {
@@ -59,9 +59,6 @@ public class PersonaDto {
         return posicion;
     }
 
-    public String getBanner() {
-        return banner;
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -95,8 +92,5 @@ public class PersonaDto {
         this.posicion = posicion;
     }
 
-    public void setBanner(String banner) {
-        this.banner = banner;
-    }
     
 }

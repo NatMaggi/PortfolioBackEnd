@@ -28,12 +28,11 @@ public class Persona implements Serializable {
     private String sobre_mi;
     private String url_foto;
     private String posicion;
-    private String banner;
 
     public Persona() {
     }
 
-    public Persona(Long id, String nombre, String apellido, String edad, String telefono, String correo, String sobre_mi, String url_foto, String posicion, String banner) {
+    public Persona(Long id, String nombre, String apellido, String edad, String telefono, String correo, String sobre_mi, String url_foto, String posicion) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -43,7 +42,7 @@ public class Persona implements Serializable {
         this.sobre_mi = sobre_mi;
         this.url_foto = url_foto;
         this.posicion = posicion;
-        this.banner = banner;
+
     }
     
     @Override
@@ -58,7 +57,6 @@ public class Persona implements Serializable {
                 + ", sobre_mi=" + sobre_mi + '\''
                 + ", url_foto=" + url_foto + '\''
                 + ", posicion=" + posicion + '\''
-                + ", banner=" + banner + '\''
                 + '}';
     }
 }

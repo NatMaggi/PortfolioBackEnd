@@ -5,6 +5,7 @@ package com.ap.portfolio.controller;
 import com.ap.portfolio.model.Persona;
 import com.ap.portfolio.service.PersonaService;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,11 +22,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/persona")
 public class ControllerPersona {
-    private final PersonaService personaService;
+    @Autowired
+    PersonaService personaService;
 
-    public ControllerPersona(PersonaService personaService) {
-        this.personaService = personaService;
-    }
+ 
    @GetMapping("/all")
    public ResponseEntity<List<Persona>> getAllPersona () {
        List<Persona> personas = personaService.findAllPersonas();
