@@ -19,7 +19,7 @@ public class Proyectos implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) 
   
-    private int id;
+    private Long id;
     
 
     private String nombre;
@@ -30,7 +30,7 @@ public class Proyectos implements Serializable {
         
     }
 
-    public Proyectos(int id, String nombre, String descripcion, String fecha, Persona persona) {
+    public Proyectos(Long id, String nombre, String descripcion, String fecha, Persona persona) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;

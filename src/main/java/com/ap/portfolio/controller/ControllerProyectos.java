@@ -53,7 +53,7 @@ public class ControllerProyectos {
        return new ResponseEntity<>(updateproyectos, HttpStatus.OK);  
    }
     
-    @DeleteMapping("/delete{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteProyectos(@PathVariable("id") Long id) {
        proyectosService.deleteProyectos(id);
        return new ResponseEntity<>(HttpStatus.OK);  

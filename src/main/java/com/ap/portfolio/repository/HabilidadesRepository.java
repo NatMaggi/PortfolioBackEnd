@@ -6,11 +6,9 @@ package com.ap.portfolio.repository;
 
 import com.ap.portfolio.model.Habilidades;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author nnmag
- */
+@Repository
 public interface HabilidadesRepository extends JpaRepository<Habilidades, Long>{
     void deleteHabilidadesById(Long id);
     

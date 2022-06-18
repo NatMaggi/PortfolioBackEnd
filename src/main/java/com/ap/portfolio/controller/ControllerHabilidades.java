@@ -51,7 +51,7 @@ public class ControllerHabilidades {
        return new ResponseEntity<>(updatehabilidades, HttpStatus.OK);  
    }
     
-    @DeleteMapping("/delete{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteHabilidades(@PathVariable("id") Long id) {
        habilidadesService.deleteHabilidades(id);
        return new ResponseEntity<>(HttpStatus.OK);  

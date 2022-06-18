@@ -7,11 +7,9 @@ package com.ap.portfolio.repository;
 
 import com.ap.portfolio.model.Proyectos;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author nnmag
- */
+@Repository
 public interface ProyectosRepository extends JpaRepository<Proyectos, Long>{
     void deleteProyectosById(Long id);
     

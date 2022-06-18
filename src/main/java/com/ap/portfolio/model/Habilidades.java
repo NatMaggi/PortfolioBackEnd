@@ -20,9 +20,7 @@ public class Habilidades implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) 
 
-    private int id;
-    
-  
+    private Long id;
     private String habilidad;
     private String url_img;
     
@@ -30,7 +28,7 @@ public class Habilidades implements Serializable {
         
     }
 
-    public Habilidades(int id, String habilidad, String url_img) {
+    public Habilidades(Long id, String habilidad, String url_img) {
         this.id = id;
         this.habilidad = habilidad;
         this.url_img = url_img;

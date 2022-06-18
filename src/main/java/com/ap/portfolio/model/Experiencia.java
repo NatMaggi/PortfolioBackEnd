@@ -19,7 +19,7 @@ public class Experiencia implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable=false, updatable=false)
-    private int id;
+    private Long id;
     private String nombreEmpresa;
     private String fechaInicio;
     private String fechaFin;
@@ -29,7 +29,7 @@ public class Experiencia implements Serializable {
         
     }
 
-    public Experiencia(int id, String nombreEmpresa, String fechaInicio, String fechaFin, String descripcion, Persona persona) {
+    public Experiencia(Long id, String nombreEmpresa, String fechaInicio, String fechaFin, String descripcion, Persona persona) {
         this.id = id;
         this.nombreEmpresa = nombreEmpresa;
         this.fechaInicio = fechaInicio;

@@ -7,10 +7,12 @@ package com.ap.portfolio.service;
 import com.ap.portfolio.model.Habilidades;
 import com.ap.portfolio.repository.HabilidadesRepository;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class HabilidadesService {
     private final HabilidadesRepository habRepo;
     

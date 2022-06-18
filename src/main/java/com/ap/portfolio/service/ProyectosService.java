@@ -5,10 +5,12 @@ import com.ap.portfolio.model.Proyectos;
 
 import com.ap.portfolio.repository.ProyectosRepository;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class ProyectosService {
     private final ProyectosRepository proRepo;
     
