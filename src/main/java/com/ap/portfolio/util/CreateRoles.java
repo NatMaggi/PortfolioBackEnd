@@ -1,4 +1,4 @@
-
+/**
 package com.ap.portfolio.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,12 +9,12 @@ import com.ap.portfolio.security.model.Role;
 import com.ap.portfolio.security.service.RoleService;
 
 
-/**
+
  * MUY IMPORTANTE: ESTA CLASE SÓLO SE EJECUTARÁ UNA VEZ PARA CREAR LOS ROLES.
  * UNA VEZ CREADOS SE DEBERÁ ELIMINAR O BIEN COMENTAR EL CÓDIGO
- *
- */
-
+ * 
+ * 
+ * 
 @Component
 public class CreateRoles implements CommandLineRunner {
 
@@ -30,3 +30,4 @@ public class CreateRoles implements CommandLineRunner {
          
     }
 }
+**/
