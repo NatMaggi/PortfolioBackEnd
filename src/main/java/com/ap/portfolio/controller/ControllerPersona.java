@@ -39,18 +39,19 @@ public class ControllerPersona {
        return new ResponseEntity<>(persona, HttpStatus.OK);
    
    }
+  
    @PostMapping("/add")
    public ResponseEntity<Persona> addPersona(@RequestBody Persona persona) {
        Persona newpersona = personaService.addPersona(persona);
        return new ResponseEntity<>(newpersona, HttpStatus.CREATED);  
    }
-   
+
    @PutMapping("/update")
     public ResponseEntity<Persona> updatePersona(@RequestBody Persona persona) {
        Persona updatepersona = personaService.updatePersona(persona);
        return new ResponseEntity<>(updatepersona, HttpStatus.OK);  
    }
-    
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deletePersona(@PathVariable("id") Long id) {
        personaService.deletePersona(id);
