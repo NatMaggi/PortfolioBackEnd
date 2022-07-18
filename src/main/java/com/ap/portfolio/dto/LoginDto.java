@@ -1,14 +1,19 @@
 
-package com.ap.portfolio.security.dto;
-
-import javax.validation.constraints.NotBlank;
+package com.ap.portfolio.dto;
 
 
-public class UserLogin {
-    @NotBlank
+public class LoginDto {
     private String userName;
-    @NotBlank
     private String password;
+    
+    public LoginDto(){
+
+}
+
+    public LoginDto(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
 
     public String getUserName() {
         return userName;
@@ -25,4 +30,8 @@ public class UserLogin {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    
 }
+
+

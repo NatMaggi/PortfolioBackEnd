@@ -8,7 +8,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-@CrossOrigin(origins = "https://localhost:4200")
+@CrossOrigin
 @RestController
 @RequestMapping("/habilidades")
 public class ControllerHabilidades {
@@ -40,19 +40,19 @@ public class ControllerHabilidades {
        return new ResponseEntity<>(habilidades, HttpStatus.OK);
    
    }
-   @PreAuthorize("hasRole('ADMIN')")
+   
    @PostMapping("/add")
    public ResponseEntity<Habilidades> addHabilidades(@RequestBody Habilidades habilidades) {
        Habilidades newhabilidades = habilidadesService.addHabilidades(habilidades);
        return new ResponseEntity<>(newhabilidades, HttpStatus.CREATED);  
    }
-   @PreAuthorize("hasRole('ADMIN')")
+   
    @PutMapping("/update")
     public ResponseEntity<Habilidades> updateHabilidades(@RequestBody Habilidades habilidades) {
        Habilidades updatehabilidades = habilidadesService.updateHabilidades(habilidades);
        return new ResponseEntity<>(updatehabilidades, HttpStatus.OK);  
    }
-    @PreAuthorize("hasRole('ADMIN')")
+    
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteHabilidades(@PathVariable("id") Long id) {
        habilidadesService.deleteHabilidades(id);
