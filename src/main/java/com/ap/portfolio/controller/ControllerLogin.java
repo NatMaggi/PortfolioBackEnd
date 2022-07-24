@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins= "https://portfolio-nmaggi.herokuapp.com/")
+@CrossOrigin(origins= "*")
 @RestController
 public class ControllerLogin {
        @Autowired
